@@ -8,6 +8,9 @@ RUN apk add --update --no-cache openjdk8-jre &&\
 # Volume to persist Datastore data
 VOLUME /opt/data
 
+# Volume to hold metadata import files
+VOLUME /opt/datastore-metadata
+
 COPY ./shellscripts/start-datastore .
 
 EXPOSE 8081

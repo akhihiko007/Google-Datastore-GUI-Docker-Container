@@ -11,7 +11,8 @@ services:
       - 8081:8081
     volumes:
       - ./data:/opt/data
-      - ./gcloud:/root/.config/gcloud 
+      - ./gcloud:/root/.config/gcloud
+      - ./datastore-metadata:/opt/datastore-metadata  
   datastore-ui:
     container_name: google-data-store-gui
     restart: always
